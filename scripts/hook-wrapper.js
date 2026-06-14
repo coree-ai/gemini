@@ -5,7 +5,7 @@ function main() {
   const hookEvent = process.env.GEMINI_HOOK_EVENT || "SessionStart";
   try {
     const args = process.argv.slice(2);
-    const stdout = execSync(`npx --yes @coree-ai/coree@0.14.1 inject ${args.join(" ")}`, {
+    const stdout = execSync(`npx --yes @coree-ai/coree@0.15.0 inject ${args.join(" ")}`, {
       encoding: "utf8",
       timeout: 110000,
       env: process.env,
