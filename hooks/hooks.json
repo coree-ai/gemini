@@ -1,36 +1,36 @@
 {
-  "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "name": "coree-inject-session",
-            "type": "command",
-            "command": "${GEMINI_EXTENSION_DIR}/scripts/hook-wrapper.js --type session",
-            "timeout": 130000,
-            "environment": {
-              "GEMINI_HOOK_EVENT": "SessionStart"
-            }
-          }
-        ]
-      }
-    ],
-    "BeforeAgent": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "name": "coree-inject-prompt",
-            "type": "command",
-            "command": "${GEMINI_EXTENSION_DIR}/scripts/hook-wrapper.js --type prompt",
-            "timeout": 120000,
-            "environment": {
-              "GEMINI_HOOK_EVENT": "BeforeAgent"
-            }
-          }
-        ]
-      }
-    ]
-  }
+	"hooks": {
+		"SessionStart": [
+			{
+				"matcher": "*",
+				"hooks": [
+					{
+						"name": "coree-inject-session",
+						"type": "command",
+						"command": "${GEMINI_EXTENSION_DIR}/scripts/hook-wrapper.js --type session",
+						"timeout": 130000,
+						"environment": {
+							"GEMINI_HOOK_EVENT": "SessionStart"
+						}
+					}
+				]
+			}
+		],
+		"BeforeAgent": [
+			{
+				"matcher": "*",
+				"hooks": [
+					{
+						"name": "coree-inject-prompt",
+						"type": "command",
+						"command": "${GEMINI_EXTENSION_DIR}/scripts/hook-wrapper.js --type prompt",
+						"timeout": 120000,
+						"environment": {
+							"GEMINI_HOOK_EVENT": "BeforeAgent"
+						}
+					}
+				]
+			}
+		]
+	}
 }
